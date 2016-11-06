@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="booksApp" >
+<head>
+  <meta charset="utf-8">
+  <title>Books</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body ng-controller="booksController">
+  <div class="container">
+    <div class="row"><div class="col-xs-12">
+      <h1>Books Search</h1>
+      <form>
+        <div class="form-group">
+          <label for="bibkey">Keys:</label>
+          <input type="text" id="bibkey" name="bibkey" placeholder="Enter bibKeys separated by comas" ng-model="bibkey" class="form-control"/>
+          <p class="text-right"><i>Example: ISBN:0451526538,LCCN:62019420</i></p>
+          <button type="submit" class="btn btn-primary" ng-click="getBooks()">Search</button>
+          
+        </div>
+      </form>
+    </div></div>
+    <div> <!-- todo: display only if books or nothing -->
+      <table class="table table-bordered">
+        <tr>
+          <th>BibKey</th>
+          <th>Title</th>
+          <th>Sub Title</th>
+          <th>Pages</th>
+          <th>URL</th>
+        </tr>
+        <tr ng-repeat="(key, book) in books">
+          <td>{{key}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.subtitle}}</td>
+          <td>{{book.number_of_pages}}</td>
+          <td><a href="{{book.url}}" target="_blank" title="{{book.url}}"><span class="glyphicon glyphicon-play"></span></a></td>
+        </tr>
+      </table>
+    </div>
+    <div ng-show="message.length" class="alert alert-danger">{{message}}</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
