@@ -1,10 +1,12 @@
-This project is a simple one testing the configuration AngularJS + express + node.js The purpose is: a single page which does the following:
+This project is a simple one testing the configuration AngularJS + express + node.js.
+The purpose is to build a single page which does the following:
 * a search box and a search button
 * user should be able to enter a bibkey (example - ISBN:0451526538) in the search box or a list of bibkeys (example: ISBN:0385472579,LCCN:62019420)
-* node.js should invoke https://openlibrary.org
+* node.js should invoke https://openlibrary.org 
 * angular should display some info of the returned books
+![Screen shot](https://github.com/sylvieg/Books/blob/master/capture.jpg)
 ----------------------------
-Installation guide:
+Installation guide: 
 1/ Install node.js and npm
 version that have been used
 node -v 6.9.1
