@@ -4,7 +4,7 @@ The purpose is to build a single page which does the following:
 * user should be able to enter a bibkey (example - ISBN:0451526538) in the search box or a list of bibkeys (example: ISBN:0385472579,LCCN:62019420)
 * node.js should invoke https://openlibrary.org 
 * angular should display some info of the returned books
-![Screen shot](https://github.com/sylvieg/Books/blob/master/capture.jpg)
+![Screen shot](https://github.com/sylvieg/Books/blob/master/capture.jpg) 
 ----------------------------
 Installation guide: 
 1/ Install node.js and npm
